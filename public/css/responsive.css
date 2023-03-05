@@ -1,0 +1,120 @@
+/*Responsive*/
+
+/*Điện thoại chiều dọc*/
+
+@media screen and (min-width: 30.0625em) and (max-width: 48em){
+  /*481px -> 768px*/
+  .keyword{
+    font-size: 1.125rem;
+  }
+
+  .word{
+    font-size: 1.031rem;
+  }
+  
+  .content{
+    width: 90%;
+  }
+  
+  .avatar img{
+    height: 200px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  p{
+    font-size: 1.031rem;
+  }
+
+  #Top_Tittle{
+    font-size: 1.375rem;
+  }
+
+  #myBtn{
+    bottom: 14%;
+    right: 5%;
+  }
+
+  .image img{
+    max-width: 90%;
+  }
+
+  .slick-prev {
+    left: 0%;
+  }
+  
+  .slick-next {
+    right: 0%;
+  }
+
+  #footer{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 30em){
+  /*Nhỏ hơn 480px*/
+  p{
+    font-size: 1rem;
+  }
+  
+  .image img{
+    width: 100%;
+  }
+  
+  .content{
+    width: 90%;
+  }
+  
+  .avatar img{
+    height: 200px;
+    width: 60%;
+  }
+
+  .slick-dots{
+    gap: 1rem;
+  }
+
+  .color-picker > fieldset{
+    padding: 1rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .word{
+    font-size: 1rem;
+  }
+  
+  .keyword{
+    font-size: 1.1rem;
+  }
+
+  .title{
+    font-size: 1.3rem;
+  }
+
+  #footer{
+    font-size: 1rem;
+  }
+
+  #myBtn{
+    bottom: 14%;
+    right: 5%;
+  }
+}
+/*!Điện thoại chiều dọc*/
+
+/*Desktop*/
+@media screen and (min-width: 120em){
+    /*Lớn hơn 1920px*/
+  .content{
+    width: 945px;
+  }
+  #myBtn{
+    bottom: 12%;
+    right: 5%;
+  }
+}
+
+/*!Responsive*/

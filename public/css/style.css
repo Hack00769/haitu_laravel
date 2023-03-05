@@ -1,0 +1,393 @@
+/*CSS của thẻ*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  /*background: linear-gradient(to right, #65dfc9, #6cdbeb);*/
+  /*background: linear-gradient(to right, #e0eafc,#CFDEF3, #ffdde1);*/
+  /*background: linear-gradient(to right, #ffdde1,#CFDEF3, #ffdde1);*/
+  /*background: linear-gradient(to right, #C9FFBF,#CFDEF3, #ffdde1);*/
+  /*background: rgba(255,221,225,0.5);*/
+  scroll-behavior: smooth;
+}
+
+:root{
+  --smooth-of-transition: .4s linear; 
+  --body-background: linear-gradient(to right, rgba(45, 70, 41, 0.4), rgba(207,222,243,0.4), rgba(255,221,225,0.4));
+  --body-card: rgba(255, 255, 255, 0.2);
+  --heading: black;
+  --title-information-text: black;
+  --information-text: black;
+  --line: black;
+  --push-to-top-background: black;
+  --push-to-top-icon: white;
+  --dot-background:black;
+  --arrow-background: black;
+  --arrow-color: white;
+  --border-of-photo: black;
+}
+
+body{
+  font-family: 'Arial', sans-serif;
+  background: var(--body-background);
+  transition: var(--smooth-of-transition);
+}
+
+body p,
+body h2.title,
+body h3.keyword,
+body span.word{
+  transition: var(--smooth-of-transition);
+}
+
+/*Custom Scrollbar*/
+body::-webkit-scrollbar{
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-image: linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045);
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track{
+  background-color: rgba(128, 128, 128, 0.65);
+/*  border-radius: 10px;*/
+}
+/*!Custom Scrollbar*/
+
+/* Image slider */
+.image-slider {
+  padding-bottom: 35px;
+  margin-bottom: 20px;
+}
+
+.image {
+  height: 490px;
+}
+
+.image img {
+  margin: auto;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slick-initialized .slick-slide {
+  margin: 0 10px;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 5;
+  transition: all 0.2s linear;
+}
+
+.slick-arrow:hover {
+  background-color: #2cccff;
+  color: white;
+}
+
+.slick-prev {
+  left: 10%;
+  background-color: var(--arrow-background);
+  color: var(--arrow-color);
+  border-radius: 100%;
+}
+
+.slick-next {
+  right: 10%;
+  background-color: var(--arrow-background);
+  color: var(--arrow-color);
+  border-radius: 100%;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.slick-dots button {
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 100rem;
+  background-color: var(--dot-background);
+  border: none;
+  outline: none;
+  transition: all 0.2s linear;
+}
+
+.slick-dots .slick-active button {
+  background-color: red;
+}
+/* !Image slider */
+
+a{
+  text-decoration: none;
+  font-weight: normal;
+  color: blue;
+}
+
+p {
+  /*user-select: none;*/
+  font-size: 1.125rem;
+  max-width: 90%;
+  text-align: center;
+  margin: 0 0 10px 0;
+  line-height: 22px;
+  color: var(--text);
+}
+
+img {
+  display: block;
+}
+
+footer {
+  background: black;
+  border-radius: 0 0 30px 30px;
+}
+
+/*!CSS của thẻ*/
+
+/*CSS của class*/
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin: 4.5rem 0 2rem 0;
+}
+
+.avatar img{
+  height: 240px;
+  margin: 0 auto;
+  border: 2px solid var(--border-of-photo);
+  width: 63%;
+  max-width: 180px;
+  border-radius: 20px 20px;
+  margin-bottom: 15px;
+}
+
+.content {
+  background: var(--body-card);
+  width: 66%;
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .37);
+  transition: var(--smooth-of-transition);
+}
+
+.keyword {
+  color: var(--title-information-text);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.information_parent{
+  display: flex;
+  justify-content: center;
+}
+
+.information{
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.paragraph_parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title{
+  text-align: center;
+  margin: 15px 0;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--heading);
+}
+
+.photo2_parent img{
+  max-width: 90%;
+  border-radius: 20px 20px;
+  border: 2px solid var(--border-of-photo);
+  margin: 10px auto;
+}
+
+.word {
+  color: var(--information-text);
+  display: block;
+  font-size: 19px;
+  margin-top: 5px;
+}
+
+.chú-thích-ảnh{
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.dash{
+  border: 1px solid var(--line);
+  width: 50%;
+  transition: var(--smooth-of-transition);
+}
+/*!CSS của class*/
+
+/*CSS của id*/
+#avatar{
+  margin: 0 auto;
+  border: 2px solid black;
+  width: 75%;
+  /* max-width: 500px; */
+  border-radius: 20px 20px;
+  margin-bottom: 15px;
+}
+
+#footer{
+  font-size: 25px;
+  padding: 10px 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+/*!CSS của id*/
+
+/* định dạng cho button */
+#myBtn {
+  display: none; /* Mặc định button sẽ được ẩn*/
+  position: fixed;
+  bottom: 60px;
+  right: 60px; 
+  z-index: 1; /* button được ưu tiên hiển thị đè lên các phần khác*/
+  border: none;
+  outline: none;
+  background-color: var(--push-to-top-background);
+  color: var(--push-to-top-icon);
+  cursor: pointer;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  line-height: 35px;
+  transition: var(--smooth-of-transition);
+}
+/* !định dạng cho button */
+.visually-hidden{
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.color-picker{
+  display: flex;
+  justify-content: center;
+}
+
+.color-picker > fieldset{
+  border: 0;
+  display: flex;
+  gap: 2rem;
+  /* width: fit-content; */
+  background: #fff;
+  padding: 1rem 3rem;
+  /* margin-inline: auto; */
+  border-radius: 0 0 1rem 1rem;
+  cursor: pointer;
+  transition: var(--smooth-of-transition);
+  position: fixed;
+  z-index: 9999;
+}
+
+.color-picker input[type="radio"]{
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  outline: 3px solid var(--radio-color, currentColor);
+  outline-offset: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-picker input[type="radio"]:checked{
+  background-color: var(--radio-color);
+  transition: var(--smooth-of-transition);
+}
+
+.color-picker input[type="radio"]#theme1{
+  --radio-color: rgba(45, 70, 41, 0.5);
+}
+.color-picker input[type="radio"]#theme2{
+  --radio-color: #a9c5ec;
+}
+.color-picker input[type="radio"]#theme3{
+  --radio-color: #ffb6bf;
+}
+.color-picker input[type="radio"]#theme4{
+  --radio-color: #9bfd8a;
+}
+.color-picker input[type="radio"]#theme5{
+  --radio-color: #0D1A26;
+}
+
+.theme1,
+:root:has(#theme1:checked){
+  --body-background: linear-gradient(to right, rgba(45, 70, 41, 0.4), rgba(207,222,243,0.4), rgba(255,221,225,0.4));
+}
+
+.theme2,
+:root:has(#theme2:checked){
+  --body-background: linear-gradient(to right, #e0eafc,#CFDEF3, #ffdde1);
+}
+
+.theme3,
+:root:has(#theme3:checked){
+  --body-background: linear-gradient(to right, #ffdde1,#CFDEF3, #ffdde1);
+}
+
+.theme4,
+:root:has(#theme4:checked){
+  --body-background: linear-gradient(to right, #C9FFBF,#CFDEF3, #ffdde1);
+}
+
+.theme5,
+:root:has(#theme5:checked){
+  --body-background: #0D1A26;
+  --body-card: #060D13;
+  --text: #D9E6F2;
+  --heading: #B3CDE6;
+  --title-information-text: #4082BF;
+  --information-text: #D9E6F2;
+  --line: whitesmoke;
+  --push-to-top-background: white;
+  --push-to-top-icon: black;
+  --dot-background: white;
+  --arrow-background: #D9E6F2;
+  --arrow-color: black;
+  --border-of-photo: none;
+}
